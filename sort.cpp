@@ -8,14 +8,14 @@ using namespace std;
 int main()
 {
     int arraysize;
-    std::cout << "Enter array size "; // Ввод массива и его размер с клавиатуры 
+    std::cout << "Enter array size "; // Р’РІРѕРґ РјР°СЃСЃРёРІР° Рё РµРіРѕ СЂР°Р·РјРµСЂ СЃ РєР»Р°РІРёР°С‚СѓСЂС‹
     std::cin >> arraysize;
     std::vector<int> array(arraysize);
     std::cout << "Enter " << arraysize << " value's ";
 for (int i = 0; i < arraysize; ++i) {
     std::cin >> array[i];
 }
-    sort(array.begin(), array.end());;      // функция сортировки по возрастанию из библиотеки algorithm
+    sort(array.begin(), array.end());;      // С„СѓРЅРєС†РёСЏ СЃРѕСЂС‚РёСЂРѕРІРєРё РїРѕ РІРѕР·СЂР°СЃС‚Р°РЅРёСЋ РёР· Р±РёР±Р»РёРѕС‚РµРєРё algorithm
     for (int ix = 0; ix < arraysize; ix++)
         std::cout << array[ix] << " ";
     return 0;
