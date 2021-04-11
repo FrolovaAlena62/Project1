@@ -5,12 +5,15 @@
 
 using namespace std;
 
-void MySort(int inSize, int* inArray) {
-    for (int i = 0; i <= inSize - 2; ++i) {
-        for (int j = 1; j <= inSize - 1 - i; ++j) {
-            if (inArray[i + j] > inArray[i])
-                std::swap(inArray[i + j], inArray[i]);
+void MySort(int* arr, long size) {
+    int i = 0, j = 0;
+    int x;
+    for (i = 0; i < size; i++) {
+        x = arr[i];
+        for (j = i - 1; j >= 0 && arr[j] > x; j--) {
+            arr[j + 1] = arr[j];
         }
+        arr[j + 1] = x;
     }
 }
 
@@ -26,7 +29,7 @@ int main()
             break;
     }
     arraysize = size(MyArray);
-    MySort(arraysize, MyArray.data());
+    MySort(MyArray.data(), arraysize);
     for (int ix = 0; ix < arraysize; ix++)
         std::cout << MyArray[ix] << " ";
     return 0;
